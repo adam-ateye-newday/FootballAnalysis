@@ -53,7 +53,7 @@ public class ScoremakerATT
     }
 
 
-    public int aveScore(int goals, int assists, int apps)
+    public int aveScoreATT(int goals, int assists, int apps)
     {
         int score = Goals(goals) + Assists(assists) + Appearances(apps);
         return score;
