@@ -27,6 +27,19 @@ namespace FootballAnalysis
             var actualScore = score.aveScoreDEF(clearances, interceptions, apps);
             actualScore.Should().Be(ave);
         }
+        [Theory]
+        [InlineData(60, 20, 26, 19, 37, 6)]         //Ederson
+        [InlineData(76, 20, 24, 30, 36, 7)]         //Alisson
+        [InlineData(128, 8, 57, 7, 38, 7)]          //De Gea
+        [InlineData(73, 14, 31, 19, 34, 6)]         //Mendy
+        [InlineData(90, 12, 39, 21, 34, 6)]         //Ramsdale
+        public void ScoremakerGKTest(int saves, int cleansheets, int conceded, int sweeps, int apps, int ave)
+        {
+            var score = new ScoremakerGK();
+            var actualScore = score.aveScoreGK(saves, cleansheets, conceded, sweeps, apps);
+            actualScore.Should().Be(ave);
+        }
     }
+
    
 }
