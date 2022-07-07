@@ -1,6 +1,6 @@
 namespace FootballAnalysisTest
 {
-    public class UnitTest1
+    public class ScoremakerTests
     {
         [Theory]
         [InlineData(23, 13, 35, 8)]                 //Salah
@@ -15,6 +15,7 @@ namespace FootballAnalysisTest
             actualScore.Should().Be(ave);
 
         }
+
         [Theory]
         [InlineData(107, 31, 34, 7)]                  //Van Dijk
         [InlineData(95, 44, 32, 7)]                   //Thiago Silva
@@ -27,6 +28,7 @@ namespace FootballAnalysisTest
             var actualScore = score.aveScoreDEF(clearances, interceptions, apps);
             actualScore.Should().Be(ave);
         }
+
         [Theory]
         [InlineData(60, 20, 26, 19, 37, 6)]         //Ederson
         [InlineData(76, 20, 24, 30, 36, 7)]         //Alisson
